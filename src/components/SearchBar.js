@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchBar.css'
+// import './SearchBar.css'
 import { Paper, TextField } from '@mui/material' 
 class SearchBar extends React.Component{
     state ={
@@ -17,10 +17,11 @@ class SearchBar extends React.Component{
         return(
             <Paper elevation ={6} style={{ padding: '15px', backgroundColor: 'hsl(244, 38%, 16%)',borderRadius: '5px'}}>
                 <form onSubmit = {this.handleSubmit} style={{backgroundColor: 'hsl(244, 38%, 16%)',borderRadius: '2px' }}>
-                    <TextField fullWidth label="Search your songs here..." onChange={this.handleChange} style={{backgroundColor: 'hsl(244, 38%, 29%)',borderRadius: '2px'}}/>
+                    <TextField fullWidth label="Search your songs here..." onChange={this.handleChange} InputLabelProps={{style: {color: 'white'}}} style={{backgroundColor: 'hsl(244, 38%, 29%)',borderRadius: '2px'}}/>
                 </form>
             </Paper>
         )
     }
 }
+
 export default SearchBar;
